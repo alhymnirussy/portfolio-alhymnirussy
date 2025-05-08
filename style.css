@@ -648,6 +648,133 @@ header .container {
     line-height: 1.4;
 }
 
+.projects-section {
+    padding: 80px 0;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: clamp(320px, 100%, 450px);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.project-image {
+    position: relative;
+    background-color: #e9e9e9;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+/* .project-year {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #2cb67d;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 1;
+} */
+
+.project-details {
+    padding: 20px 25px 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-details h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #222222;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.65;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    text-align: justify;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.project-tags span {
+    background-color: #ebebeb;
+    color: #444444;
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #eaeaea;
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1.5px solid #cccccc;
+    border-radius: 50%;
+    color: #555555;
+    transition: all 0.25s ease;
+}
+
+.project-links a:hover {
+    background-color: #111111;
+    border-color: #111111;
+    color: #ffffff;
+    transform: translateY(-2px) scale(1.05);
+}
+
+.project-links a svg {
+    width: 18px;
+    height: 18px;
+}
+
 .contact-section {
     padding: 80px 0;
     background-color: #ffffff;
@@ -1080,6 +1207,35 @@ footer p {
         font-size: 1rem;
     }
 
+    .projects-section {
+        padding: 60px 0;
+    }
+    
+    .projects-grid {
+        gap: 25px;
+    }
+    
+    .project-card {
+        width: clamp(300px, calc(100% - 30px), 400px);
+    }
+    
+    .project-image img {
+        max-height: 220px;
+    }
+    
+    .project-details h3 {
+        font-size: 1.3rem;
+    }
+    
+    .project-description {
+        font-size: 0.9rem;
+    }
+    
+    .project-tags span {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }    
+
     .contact-section {
         padding: 60px 0;
     }
@@ -1110,7 +1266,7 @@ footer p {
 
     footer {
         padding: 30px 0;
-        margin-top: 60px;
+        margin-top: 80px;
     }
     footer .container {
         gap: 15px;
@@ -1285,6 +1441,57 @@ footer p {
       .skill-item h3 {
         font-size: 0.9rem;
     }
+
+    .projects-grid {
+        gap: 20px;
+    }
+    
+    .project-card {
+        width: clamp(280px, calc(100% - 20px), 360px);
+    }
+    
+    .project-image img {
+        max-height: 180px;
+    }
+    
+    /* .project-year {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+        top: 10px;
+        left: 10px;
+    } */
+    
+    .project-details {
+        padding: 15px 20px 20px;
+    }
+    
+    .project-details h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .project-description {
+        margin-bottom: 15px;
+    }
+    
+    .project-tags {
+        margin-bottom: 20px;
+        gap: 6px;
+    }
+    
+    .project-tags span {
+        padding: 4px 8px;
+    }
+    
+    .project-links a {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .project-links a svg {
+        width: 16px;
+        height: 16px;
+    }    
 
      .contact-social-icons {
         gap: 15px;
