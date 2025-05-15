@@ -58,40 +58,32 @@
             <div class="container">
                 <p class="section-subtitle text-center">Get To Know More</p>
                 <h2 class="section-title text-center">About Me</h2>
-                <div class="about-content-wrapper">
-                    <div class="about-cards-container">
-                        <div class="about-card">
-                            <div class="about-card-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase">
-                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                                </svg>
-                            </div>
-                            <h3 class="about-card-title">Experience</h3>
-                            <p class="about-card-text">2+ years</p>
-                            <p class="about-card-text-small">Frontend Development</p>
-                        </div>
-                        <div class="about-card">
-                            <div class="about-card-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open">
-                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="about-card-title">Education</h3>
-                            <p class="about-card-text">Bachelor's Degree</p>
-                            <p class="about-card-text-small">Computer Science - UNTAN (GPA: 3.85)</p>
-                            <p class="about-card-text-small">Graduated: 2025</p>
-                        </div>
+                <div class="about-container">
+                    <div class="about-image-wrapper">
+                        <img src="./assets/profile2.png" alt="My workspace or a relevant image">
                     </div>
-                    <div class="about-description-container">
-                        <p class="description-text">
-                            Hi, I’m Russy — a fresh graduate with a strong passion for Mobile Development, particularly using Flutter. I enjoy creating visually appealing and high-performance mobile applications that run smoothly on both Android and iOS platforms. I’m constantly learning and exploring new technologies, and I take pride in writing clean, maintainable code. Collaboration is something I value highly, and I love working with others to turn ideas into fully functional apps. Feel free to explore my portfolio — I’d be excited to be part of your next big project!
-                        </p>                        
+                    <div class="about-text-wrapper">
+                        <p class="about-description">
+                            Hi, I’m Russy — a passionate Mobile and Web Developer with a fresh academic background and a focus on Flutter for mobile apps and modern web technologies. I love turning ideas into clean, responsive, and user-friendly applications. Whether it's mobile or web, I enjoy collaborating and building products that make an impact. Let’s create something great together!
+                        </p>
+                        <nav class="about-tabs-nav">
+                            <ul>
+                                <li><a href="#education-tab" class="tab-link active" data-tab="education">Education</a></li>
+                                <li><a href="#certifications-tab" class="tab-link" data-tab="certifications">Certifications</a></li>
+                            </ul>
+                        </nav>
+                        <div class="about-tabs-content">
+                            <div id="education-tab" class="tab-pane active">
+                                <p>Graduated with a Bachelor's degree in Informatics from Tanjungpura University in 2025 (GPA 3.8), with hands-on experience in software engineering, web and mobile development, and database systems.</p>
+                            </div>
+                            <div id="certifications-tab" class="tab-pane">
+                                <p>Relevant certifications and completed courses will be showcased here.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>        
+        </section>
         <section id="experiences" class="experiences-section">
             <div class="container">
                 <p class="section-subtitle text-center">Explore My</p>
@@ -123,11 +115,17 @@
                         <div class="timeline-icon"></div>
                         <div class="timeline-content">
                             <span class="timeline-date">2021 - 2022</span>
-                            <h3>Personal Project: E-Commerce Platform</h3>
+                            <h3>Personal Project</h3>
                             <p class="timeline-company">Independent Study</p>
                             <p class="timeline-description">
                                 Designed and built a full-stack e-commerce website concept using PHP (CodeIgniter) and Bootstrap. Implemented features like product catalogs, user authentication, and a basic shopping cart. Focused on learning database design and backend development principles.
                             </p>
+                            <button class="btn-toggle-details">More</button>
+                            <div class="timeline-extra-info">
+                                <ul class="timeline-details-list">
+                                    <li>Built a RESTful web service for a simple contact management system using Node.js to practice API development.</li>
+                                </ul>                                
+                            </div>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -266,23 +264,22 @@
         </section>
         <section id="projects" class="projects-section">
             <div class="container">
-                <p class="section-subtitle text-center">Browse My Recent</p>
+                <p class="section-subtitle text-center">Browse My</p>
                 <h2 class="section-title text-center">Projects</h2>
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-image">
                             <!-- <span class="project-year">2025</span> -->
-                            <img src="./assets/project1.jpg" alt="WhatsApp Gateway UI Thumbnail">
+                            <img src="./assets/project2.png" alt="RESTful API">
                         </div>
                         <div class="project-details">
-                            <h3>WhatsApp Gateway UI</h3>
+                            <h3>Contact Management RESTful API</h3>
                             <p class="project-description">
-                                A Laravel-based UI for WhatsApp gateway, allowing users to manage their WhatsApp accounts.
-                            </p>
+                                Created a RESTful web service using Node.js and Express to handle contact data operations such as creating, reading, updating, and deleting (CRUD). The project was focused on learning API development, route handling, and basic data persistence.
+                            </p>                            
                             <div class="project-tags">
-                                <span>Laravel</span>
                                 <span>Node.js</span>
-                                <span>Tailwind</span>
+                                <span>Express.js</span>
                                 <span>MySQL</span>
                             </div>
                             <div class="project-links">
@@ -304,26 +301,21 @@
                     <div class="project-card">
                         <div class="project-image">
                             <!-- <span class="project-year">2025</span> -->
-                            <img src="./assets/project1.jpg" alt="Financial Management System Thumbnail">
+                            <img src="./assets/project2.png" alt="RESTful API">
                         </div>
                         <div class="project-details">
-                            <h3>Financial Management System</h3>
+                            <h3>Airport Taxi Sharing (Android App)</h3>
                             <p class="project-description">
-                                A web-based financial management system using Laravel, with features for budgeting and expense tracking.
-                            </p>
+                                Created a RESTful web service using Node.js and Express to handle contact data operations such as creating, reading, updating, and deleting (CRUD). The project was focused on learning API development, route handling, and basic data persistence.
+                            </p>                            
                             <div class="project-tags">
-                                <span>Laravel</span>
-                                <span>Tailwind</span>
-                                <span>MySQL</span>
+                                <span>Flutter</span>
+                                <span>FireBase</span>
+                                <span>React.js</span>
+                                <span>Node.js</span>
+                                <span>Express.js</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" target="_blank" aria-label="Live Demo">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                </a>
                                 <a href="#" target="_blank" aria-label="GitHub Repository" class="github-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>

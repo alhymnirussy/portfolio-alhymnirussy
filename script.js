@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const typingEffectElement = document.getElementById('typing-effect');
     if (typingEffectElement) {
-        const titles = ["Mobile Developer", "Flutter Enthusiast", "Frontend Developer"];
+        const titles = ["Mobile Developer", "Flutter Enthusiast", "Web Developer"];
         let titleIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (titles.length > 0) {
-             setTimeout(type, 1000);
+            setTimeout(type, 1000);
         }
     }
 
@@ -122,8 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                         formStatus.classList.add('error');
                     }).catch(() => {
-                         formStatus.textContent = 'Oops! There was a problem submitting your form. Status: ' + response.status;
-                         formStatus.classList.add('error');
+                        formStatus.textContent = 'Oops! There was a problem submitting your form. Status: ' + response.status;
+                        formStatus.classList.add('error');
                     });
                 }
             })
@@ -134,15 +134,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 formStatus.classList.add('error');
             })
             .finally(() => {
-                 submitButton.disabled = false;
-                 submitButton.style.opacity = '1';
-                 setTimeout(() => {
-                     formStatus.textContent = '';
-                     formStatus.className = 'form-status-message';
-                     formStatus.style.display = 'none';
-                 }, 6000);
+                submitButton.disabled = false;
+                submitButton.style.opacity = '1';
+                setTimeout(() => {
+                    if (formStatus.classList.contains('success')) {
+                        formStatus.textContent = '';
+                        formStatus.className = 'form-status-message';
+                        formStatus.style.display = 'none';
+                    }
+                }, 6000);
             });
         });
     }
 
+    const aboutTabLinks = document.querySelectorAll('.about-section .about-tabs-nav .tab-link');
+    const aboutTabPanes = document.querySelectorAll('.about-section .about-tabs-content .tab-pane');
+
+    if (aboutTabLinks.length > 0 && aboutTabPanes.length > 0) {
+        aboutTabLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                aboutTabLinks.forEach(l => l.classList.remove('active'));
+                aboutTabPanes.forEach(p => p.classList.remove('active'));
+
+                this.classList.add('active');
+                const targetTabId = this.getAttribute('data-tab');
+                const targetPane = document.getElementById(targetTabId + '-tab');
+                if (targetPane) {
+                    targetPane.classList.add('active');
+                }
+            });
+        });
+    }
 });
